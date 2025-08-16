@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Angus Coolan</title>
+  <style>
+    body {
+    	font-family: sans-serif;
+    	max-width: 800px;
+    	margin: auto;
+    	padding: 1em;
+    }
+
+    .panel {
+		background-color: #bfbfbf;
+    	padding: 16px;
+		border-radius: 8px;
+		box-shadow: 4px 4px #000040;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+    }
+
+	.panel img {
+		margin: auto;
+	}
+
+	.images {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 0 auto;
+		gap: 16px;
+	}
+
+    .panel h2 {
+		margin-top: 0px;
+    	margin-bottom: 4px;
+    }
+
+	h1 {
+		text-align: center;
+	}
+
+	h2 {
+		text-align: left;
+		margin-left: 32px;
+		font-size: 48px;
+		color: #202020;
+	}
+
+	p {
+		text-align: left;
+	}
+
+	.pagelinks {
+		display: flex;
+		justify-content: space-around;
+		text-align: center;
+		font-family: 'Courier New', Courier, monospace;
+		
+	}
+
+	.pagelinks a {
+		text-decoration: none;
+	}
+
+	.pagelinks a:visited{
+		color: inherit;
+	}
+
+	.readMore {
+		background-color: #a8a8a8;
+		border-radius: 4px;
+		text-align: left;
+		padding: 16px;
+	}
+
+	.readMore a:visited {
+		color: inherit;
+		
+	}
+
+	.page {
+	}
+
+  </style>
+</head>
+<body>
+
+	<div class="pagelinks">
+		<a href="#/" id= "welcomeLink">Welcome</a>
+		<a href="#/clientwork" id= "clientworkLink">Client Work</a>
+		<a href="#/personalprojects" id= "personalprojectsLink">Personal Projects</a>
+		<a href="#/tutorials" id= "tutorialsLink">Tutorials</a>
+	</div>
+	<br>
+	<div class="page" id="personalprojectsPage" style="display:none;">
+		<div class="panel">
+			<h2>Fantasmithy</h2>
+			<div class="readMore">
+				<a href="#" onclick="toggleReadMore(this); return false;">Read more...</a>
+				<div class="readMoreText" style="display:none;">
+					<p>Fantasmithy is a small arcade action game in development by myself and Kyle Burnette. It was conceived as a simple test bed for us to practice various aspects of game development. Characters, scenario, and art are all by me.</p>
+				</div>
+			</div>
+			<div class="images">
+				<img src="images/fantasmithy/title.gif">
+				<img src="images/fantasmithy/map.png">
+			</div>
+			<br>
+			<div class="images">
+				<img src="images/fantasmithy/Player_RunNorth.gif">
+			</div>
+		</div>
+	</div>
+	<div class="page" id="welcomePage" style="display:none;">
+		<h2>Welcome</h2>
+			<p>This site is under construction, visit <a href="https://www.anguscoolan.com/">anguscoolan.com</a> for my current site.</p>
+	</div>
+	<div class="page" id="clientworkPage" style="display:none;">
+		<h2>Client Work</h2>
+	</div>
+	<div class="page" id="tutorialsPage" style="display:none;">
+		<h2>Tutorials</h2>
+	</div>
+
+	<script>
+		function handleRoute() {
+			const route = window.location.hash;
+
+			const pages = document.querySelectorAll('.page');
+			pages.forEach(page => page.style.display = "none");
+
+			const pageLinks = document.querySelectorAll('.pagelinks a');
+			pageLinks.forEach(link => link.style.color = "#000000");
+
+			let pageName = route.replace('#/', '');
+			if (!pageName) pageName = 'welcome';
+
+			const link = pageName + 'Link'
+			const page = pageName + 'Page'
+
+			document.getElementById(page).style.display = "";
+			document.getElementById(link).style.color = "#00ffbf";
+
+		}
+
+		function toggleReadMore(link) {
+			var text = link.nextElementSibling;
+			if (text.style.display === "none") {
+				text.style.display = "";
+				link.textContent = "Read less...";
+			} else {
+				text.style.display = "none";
+				link.textContent = "Read more...";
+			}
+		}
+
+		function enablePage(link, pageID) {
+			page = document.getElementById(pageID)
+				page.style.display = "";
+				link.style.color = "#00ffbf";
+		}
+
+		window.addEventListener('hashchange', handleRoute);
+		window.addEventListener('DOMContentLoaded', handleRoute);
+	</script>
+
+</body>
+</html>
