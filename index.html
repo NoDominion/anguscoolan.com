@@ -11,6 +11,10 @@
     	padding: 1em;
     }
 
+	img {
+		image-rendering: pixelated;
+	}
+
     .panel {
 		background-color: #bfbfbf;
     	padding: 16px;
@@ -106,12 +110,12 @@
 				</div>
 			</div>
 			<div class="images">
-				<img src="images/fantasmithy/title.gif">
-				<img src="images/fantasmithy/map.png">
+				<img data-src="images/fantasmithy/title.gif">
+				<img data-src="images/fantasmithy/map.png">
 			</div>
 			<br>
 			<div class="images">
-				<img src="images/fantasmithy/Player_RunNorth.gif">
+				<img data-src="images/fantasmithy/Player_RunNorth.gif">
 			</div>
 		</div>
 	</div>
@@ -144,6 +148,12 @@
 
 			document.getElementById(page).style.display = "";
 			document.getElementById(link).style.color = "#00ffbf";
+
+			// find images with data-src attribute and load them
+			document.getElementById(page).querySelectorAll("img[data-src]").forEach(img => {
+				img.src = img.dataset.src;
+				img.removeAttribute("data-src");
+			});
 
 		}
 
