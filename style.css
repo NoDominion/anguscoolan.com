@@ -44,6 +44,11 @@ body {
 		padding: 16px;
 	}
 
+	.readMore a,
+	.readMore .readMoreText,
+	.readMoreText p {
+    font-size: inherit;
+	}
 
 	.readMore a {
 		color: black
@@ -52,7 +57,7 @@ body {
 	.page {
 	}
 
-	
+
     .panel {
 		background-color: #bfbfbf;
     	padding: 16px;
