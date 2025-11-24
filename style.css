@@ -1,13 +1,6 @@
-html { 
-	-webkit-text-size-adjust: 100%; 
-	-ms-text-size-adjust: 100%;
-	-moz-text-size-adjust: 100%;
-	text-size-adjust: 100%;
-}
-
 body {
     	font-family: sans-serif;
-    	max-width: 800px;
+    	max-width: 960px;
     	margin: auto;
     	padding: 1em;
     }
@@ -51,19 +44,12 @@ body {
 		padding: 16px;
 	}
 
-	.readMore a,
-	.readMore .readMoreText,
-	.readMoreText p {
-    font-size: inherit;
-	}
-
 	.readMore a {
 		color: black
 	}
 
 	.page {
 	}
-
 
     .panel {
 		background-color: #bfbfbf;
@@ -102,7 +88,6 @@ body {
 	.panel a {
 		color: inherit;
 	}
-
 
 	.images {
 		display: flex;
