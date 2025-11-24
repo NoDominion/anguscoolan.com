@@ -74,8 +74,7 @@ p {
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
-	transform: translateZ(0);
-	will-change: transform;
+	contain: paint;
 }
 
 .panel h2 {
