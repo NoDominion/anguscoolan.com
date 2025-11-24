@@ -128,7 +128,6 @@ p {
 	padding: 16px;
 	border-radius: 8px;
 	gap: 16px;
-	line-height: 0;
 }
 
 .lineContainer {
@@ -197,4 +196,15 @@ p {
 
 .nonpixel img {
 	height: 300px;
+}
+
+
+.panel,
+.container {
+    /* promote to own layer and hint the compositor */
+    will-change: transform, background-color;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
