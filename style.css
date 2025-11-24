@@ -69,13 +69,13 @@ p {
 	background-color: var(--base-color);
 	padding: 24px;
 	border-radius: 8px;
-	box-shadow: 
-		4px 4px var(--drop-shadow-color),
-		0 0 1px var(--base-color) inset;
+	box-shadow: 4px 4px var(--drop-shadow-color);
 	text-align: center;
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
+	transform: translateZ(0);
+	will-change: transform;
 }
 
 .panel h2 {
