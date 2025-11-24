@@ -3,108 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <title>Angus Coolan</title>
-  <style>
-    body {
-    	font-family: sans-serif;
-    	max-width: 800px;
-    	margin: auto;
-    	padding: 1em;
-    }
-
-	img {
-		image-rendering: pixelated;
-	}
-
-    .panel {
-		background-color: #bfbfbf;
-    	padding: 16px;
-		border-radius: 8px;
-		box-shadow: 4px 4px #000040;
-		text-align: center;
-		display: flex;
-		flex-direction: column;
-		gap: 16px;
-    }
-
-	.panel img {
-		margin: auto;
-	}
-
-	.images {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		margin: 0 auto;
-		gap: 16px;
-	}
-
-	.sideBySide {
-		display: flex;
-		width: fit-content;
-		margin: 0 auto;
-		gap: 16px;
-	}
-
-	.container {
-		width: fit-content;
-		border: 1px solid;
-	}
-
-    .panel h2 {
-		margin-top: 0px;
-    	margin-bottom: 4px;
-    }
-
-	h1 {
-		text-align: center;
-	}
-
-	h2 {
-		text-align: left;
-		margin-left: 32px;
-		font-size: 48px;
-		color: #202020;
-	}
-
-	p {
-		text-align: left;
-	}
-
-	.pagelinks {
-		display: flex;
-		justify-content: space-around;
-		text-align: center;
-		font-family: 'Courier New', Courier, monospace;
-		
-	}
-
-	.pagelinks a {
-		text-decoration: none;
-	}
-
-	.pagelinks a:visited{
-		color: inherit;
-	}
-
-	.readMore {
-		background-color: #a8a8a8;
-		border-radius: 4px;
-		text-align: left;
-		padding: 16px;
-	}
-
-	.readMore a:visited {
-		color: inherit;
-		
-	}
-
-	.page {
-	}
-
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 	<div class="pagelinks">
 		<a href="#/" id= "welcomeLink">Welcome</a>
 		<a href="#/clientwork" id= "clientworkLink">Client Work</a>
@@ -112,8 +13,38 @@
 		<a href="#/tutorials" id= "tutorialsLink">Tutorials</a>
 	</div>
 	<br>
+	<div class="page" id="welcomePage" style="display:none;">
+		<div class="panel" id="elcomePanel" style="padding: 0px;">
+			<div class="sideBySide" style="align-items: flex-start;">
+				<div style="padding: 16px; text-align: left;">
+					<h2>
+						Angus Coolan
+						<a href="mailto:angus.coolan@gmail.com" target="_blank" rel="noopener noreferrer">
+								<img class="h2-link" data-src="images/icons/mail.png" alt="email">
+						</a>
+						<a href="https://bsky.app/profile/anguscoolan.bsky.social" target="_blank" rel="noopener noreferrer">
+								<img class="h2-link" data-src="images/icons/bsky.png" alt="bsky.app">
+						</a>
+					</h2>
+					<p style="margin-left: 48px;">
+						Welcome to my site! I am a freelance artist specialising in game development based in Brisbane, Australia.
+						<br>
+						<br>
+						I have been creating games as a hobby since 2007 and professionally since 2015. I have a degree in animation from Griffith Film school and have worked on numerous video games as a pixel art generalist.
+						<br>
+						<br>
+						As a pixel artist I am experienced in the creation of all game assets, including but not limited to, characters, animation, backgrounds, tiles, and UI. I am also handy with traditional animation, 3d modelling, illustration, and digital painting.
+						<br>
+						<br>
+						Please take a look at my work and feel free to <a href="mailto:angus.coolan@gmail.com">contact me</a> with any inquiries.
+					</p>
+				</div>
+				<img data-src="images/welcome/tree.png" style="height: 400px;">
+			</div>
+		</div>
+	</div>
 	<div class="page" id="personalprojectsPage" style="display:none;">
-		<div class="panel">
+		<div class="panel" id="fantasmithyPanel">
 			<h2>Fantasmithy</h2>
 			<div class="readMore">
 				<a href="#" onclick="toggleReadMore(this); return false;">Read more...</a>
@@ -133,28 +64,575 @@
 						<img data-src="images/fantasmithy/player_attack.gif">
 					</div>
 					<br>
+					<div class="sideBySide">
+						<div class="container">
+							<div class="images">
+								<img data-src="images/fantasmithy/ice_blob_spawn.gif">
+							</div>
+							<br>
+							<div class="images">
+								<img data-src="images/fantasmithy/fire_blob.gif">
+							</div>
+							</div>
+						<div class="images">
+							<img data-src="images/fantasmithy/elemental_electricity.gif">
+							<img data-src="images/fantasmithy/elemental_ice.gif">
+							<img data-src="images/fantasmithy/elemental_fire.gif">
+						</div>
+					</div>
+					<br>
 					<div class="images">
-						<img data-src="images/fantasmithy/elemental_electricity.gif">
-						<img data-src="images/fantasmithy/elemental_ice.gif">
-						<img data-src="images/fantasmithy/elemental_fire.gif">
+						<img data-src="images/fantasmithy/spirit_idle.gif">
+						<img data-src="images/fantasmithy/boss_idle.gif">
+						<img data-src="images/fantasmithy/boss_fire.png">
+						<img data-src="images/fantasmithy/boss_electricity.png">
+						<img data-src="images/fantasmithy/boss_ice.png">
 					</div>
 				</div>
 				<div class="images">
 					<img data-src="images/fantasmithy/swords.png">
 				</div>
 			</div>
+		</div>
+		<br>
+		<div class="panel" id="tonfaprincessPanel">
+			<h2>Tonfa Princess</h2>
+			<div class="readMore">
+				<a href="#" onclick="toggleReadMore(this); return false;">Read more...</a>
+				<div class="readMoreText" style="display:none;">
+					<p>Tonfa Princess is a platform adventure game concept I have been working on for several years. Initially conceived as a folio piece I have since developed more assets and concepts for the game and would like to produce it given the chance.</p>
+				</div>
+			</div>
+			<div class="sideBySide">
+				<div class="images">
+					<img data-src="images/tonfa_princess/animated_mockup.gif">
+				</div>
+				<div class="container">
+					<div class="images">
+						<img data-src="images/tonfa_princess/myr_jump.gif">
+						<img data-src="images/tonfa_princess/myr_crouch.gif">
+						<img data-src="images/tonfa_princess/myr_crouch_attack.gif">
+						<img data-src="images/tonfa_princess/myr_attack.gif">
+						<img data-src="images/tonfa_princess/myr_run.gif">
+						<img data-src="images/tonfa_princess/myr_idle.gif">
+						<img data-src="images/tonfa_princess/sp_idle.png">
+						<img data-src="images/tonfa_princess/sp_run.gif">
+					</div>
+					<br>
+					<div class="images">
+						<img data-src="images/tonfa_princess/icespirit_idle.png">
+						<img data-src="images/tonfa_princess/lightsprit_idle.png">
+						<img data-src="images/tonfa_princess/enemies.png">
+						<img data-src="images/tonfa_princess/eyesnake_idle.gif">
+						<img data-src="images/tonfa_princess/eyesnake_attack.gif">
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="panel" id="valentinesdayPanel">
+			<h2>Valentines Day</h2>
+			<div class="readMore">
+				<a href="#" onclick="toggleReadMore(this); return false;">Read more...</a>
+				<div class="readMoreText" style="display:none;">
+					<p>Every year I make my wife a pixel art image commemorating the time we've spent together.</p>
+				</div>
+			</div>
+			<div class="images">
+				<img data-src="images/valentines_day/vd_2018.png">
+				<img data-src="images/valentines_day/vd_2019.gif">
+				<img data-src="images/valentines_day/vd_2020.gif">
+				<img data-src="images/valentines_day/vd_2021.png">
+				<img data-src="images/valentines_day/vd_2022.png">
+				<img data-src="images/valentines_day/vd_2023.png">
+				<img data-src="images/valentines_day/vd_2024.png">
+				<img data-src="images/valentines_day/vd_2025.png">
+			</div>
+		</div>
+		<br>
+		<div class="panel" id="snapshotPanel">
+			<h2>
+				Snapshot
+				<a href="https://teamacidburn.itch.io/snapshot" target="_blank" rel="noopener noreferrer">
+					<img class="h2-link" data-src="images/icons/itch.png" alt="itch.io">
+				</a>
+			</h2>
+			<div class="readMore">
+				<a href="#" onclick="toggleReadMore(this); return false;">Read more...</a>
+				<div class="readMoreText" style="display:none;">
+					<p>Snapshot is a short typing game made over the course of one weekend for Global Game Jam 2022. I came up with the concept along with my team and provided all of the art for the game.</p>
+				</div>
+			</div>
+			<div class="carousel">
+				<img data-src="images/snapshot/title.png">
+				<img data-src="images/snapshot/gameplay.png">
+			</div>
 			
 		</div>
+		<br>
+		<div class="panel" id="tabletopgamePanel">
+			<h2>Tabletop Game</h2>
+			<div class="readMore">
+				<a href="#" onclick="toggleReadMore(this); return false;">Read more...</a>
+				<div class="readMoreText" style="display:none;">
+					<p>A series of characters for a tabletop rpg.</p>
+				</div>
+			</div>
+			<div class="images">
+				<img data-src="images/card_game/cg_tempest.png">
+				<div class="lineContainer">
+					<div class="container">
+						<img data-src="images/card_game/cg_thief.png">
+						<img data-src="images/card_game/cg_warriorprincess.png">
+						<img data-src="images/card_game/cg_nomad.png">
+						<img data-src="images/card_game/cg_brawler.png">
+						<img data-src="images/card_game/cg_mysticdefender.png">
+					</div>
+				</div>
+				<div class="lineContainer">
+					<div class="container">
+						<img data-src="images/card_game/cg_shieldgod.png">
+						<img data-src="images/card_game/cg_hologram.png">
+						<img data-src="images/card_game/cg_woodgoblin.png">
+						<img data-src="images/card_game/cg_mechspider.png">
+						<img data-src="images/card_game/cg_mechgirl.png">
+						<img data-src="images/card_game/cg_icegodess.png">
+						<img data-src="images/card_game/cg_fairy.png">
+						<img data-src="images/card_game/cg_witch.png">
+						<img data-src="images/card_game/cg_firedemon.png">
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="panel" id="pixelartPanel">
+			<h2>Pixel Art Bits and Pieces</h2>
+			<div class="readMore">
+				<a href="#" onclick="toggleReadMore(this); return false;">Read more...</a>
+				<div class="readMoreText" style="display:none;">
+					<p>A collection of art pieces I have made over the years.</p>
+				</div>
+			</div>
+			<div class="images">
+				<img data-src="images/personal_pixel_art/lunar_eclipse.png">
+				<img data-src="images/personal_pixel_art/where_the_light_comes_from.png">
+				<img data-src="images/personal_pixel_art/where_the_light_comes_from_2.png">
+				<img data-src="images/personal_pixel_art/scribble.png">
+				<img data-src="images/personal_pixel_art/aerowen_portrait.png">
+				<img data-src="images/personal_pixel_art/to_fry.png">
+				<img data-src="images/personal_pixel_art/hcbl.png">
+				<img data-src="images/personal_pixel_art/skin_deep.png">
+				<img data-src="images/personal_pixel_art/blue_below.png">
+				<img data-src="images/personal_pixel_art/ty_girl.png">
+				<img data-src="images/personal_pixel_art/to_ptoing.png">
+				<img data-src="images/personal_pixel_art/headwind_mockup.png">
+				<img data-src="images/personal_pixel_art/train.png">
+				<img data-src="images/personal_pixel_art/manic_platformer.png">
+				<img data-src="images/personal_pixel_art/moonlight_mockup.png">
+			</div>
+		</div>
+		<br>
+		<div class="panel" id="otherworksPanel">
+			<h2>Other Works</h2>
+			<div class="readMore">
+				<a href="#" onclick="toggleReadMore(this); return false;">Read more...</a>
+				<div class="readMoreText" style="display:none;">
+					<p>A collection of non-pixel art pieces I have made over the years.</p>
+				</div>
+			</div>
+			<div class="nonpixel">
+				<img data-src="images/other_works/sympathy_underwater.jpg" style="max-width: 100%; height: auto;">
+				<img data-src="images/other_works/aerowen.jpg">
+				<img data-src="images/other_works/anne.jpg">
+				<img data-src="images/other_works/paige.jpg">
+				<img data-src="images/other_works/hanako.jpg">
+				<img data-src="images/other_works/sympathy_character.jpg">
+				<img data-src="images/other_works/weak_force.jpg">
+				<img data-src="images/other_works/ldedittrans.jpg">
+				<img data-src="images/other_works/unit01_walk.gif">
+				<img data-src="images/other_works/stars.jpg">
+				<img data-src="images/other_works/unit01_sketches.png"style="max-width: 100%; height: auto;">
+				<img data-src="images/other_works/life_drawing.jpg"style="max-width: 100%; height: auto;">
+				
+				
+			</div>
+		</div>
+
 	</div>
-	<div class="page" id="welcomePage" style="display:none;">
-		<h2>Welcome</h2>
-			<p>This site is under construction, visit <a href="https://www.anguscoolan.com/">anguscoolan.com</a> for my current site.</p>
-	</div>
+
 	<div class="page" id="clientworkPage" style="display:none;">
-		<h2>Client Work</h2>
+		<div class="panel" id="tempopoPanel">
+			<h2>
+				Tempopo
+				<a href="https://store.steampowered.com/app/318840/Tempopo/" target="_blank" rel="noopener noreferrer">
+					<img class="h2-link" data-src="images/icons/steam.png" alt="steam.com">
+				</a>
+				<span class="h2-meta">2024 - 2025</span>
+			</h2>
+			<div class="readMore">
+				<a href="#" onclick="toggleReadMore(this); return false;">Read more...</a>
+				<div class="readMoreText" style="display:none;">
+					<p><i>Tempopo</i> is a 3d puzzle game for which I was the UI artist. I was in charge of designing how the UI would look and feel as well as creating the hundreds of hand drawn assets needed to make it all work.
+					</p>
+				</div>
+			</div>
+			<div class="carousel">
+				<img data-src="images/tempopo/mountain_climb.png">
+				<img data-src="images/tempopo/hana_garden.png">
+			</div>
+		</div>
+		<br>
+		<div class="panel" id="unpackingPanel">
+			<h2>
+				Unpacking
+				<a href="https://store.steampowered.com/app/1135690/Unpacking/" target="_blank" rel="noopener noreferrer">
+					<img class="h2-link" data-src="images/icons/steam.png" alt="steam.com">
+				</a>
+				<span class="h2-meta">2018 - 2021</span>
+			</h2>
+			<div class="readMore">
+				<a href="#" onclick="toggleReadMore(this); return false;">Read more...</a>
+				<div class="readMoreText" style="display:none;">
+					<p><i>Unpacking</i> is an isometric zen puzzle game released in 2021. The style was established by creative director Wren Brier and I worked closely with her in the development of the games art. My job was to create the bulk of items for the game as well as clean up blocked in environments created by Wren. I also created several large scale images used throughout the game for things like the title and menu screens as well as a post credits artwork. Exterior environments seen through windows in the game were also created by me.
+						<br><br>
+						Additional cleanup and rendering work on the game was done by Michelle Whitehead and Joseph-Paul Silipo. For the title screen I created a pixel art version of Unpacking's key art which was originally drawn by Stacey Richmond. The posted screenshots show the first 3 levels of the game for which I did the majority of the art. Environments were blocked in and in some places rendered by Wren, and she created about half of the items in the child bedroom level. All art in the game was done with the help of detailed feedback from Wren.
+						<br><br>
+						On Unpacking I learned how to work quickly and accurately in an isometric perspective and I developed many strategies to draw objects from multiple angles. I also learned a lot about effective project management and art pipelines.
+					</p>
+				</div>
+			</div>
+			<div class="carousel">
+				<img data-src="images/unpacking/screenshot_0.png">
+				<img data-src="images/unpacking/screenshot_1.png">
+				<img data-src="images/unpacking/screenshot_2.png">
+				<img data-src="images/unpacking/screenshot_3.png">
+				<img data-src="images/unpacking/screenshot_4.png">
+				<img data-src="images/unpacking/screenshot_5.png">
+				<img data-src="images/unpacking/screenshot_6.png">
+				<img data-src="images/unpacking/screenshot_7.png">
+				<img data-src="images/unpacking/screenshot_8.png">
+				<img data-src="images/unpacking/screenshot_9.png">
+			</div>
+		</div>
+		<br>
+		<div class="panel" id="demoncrushPanel">
+			<h2>
+				Demon Crush
+				<a href="https://store.steampowered.com/app/2753400/Demon_Crush/" target="_blank" rel="noopener noreferrer">
+					<img class="h2-link" data-src="images/icons/steam.png" alt="steam.com">
+				</a>
+				<span class="h2-meta">2015 - 2020</span>
+			</h2>
+			<div class="readMore">
+				<a href="#" onclick="toggleReadMore(this); return false;">Read more...</a>
+				<div class="readMoreText" style="display:none;">
+					<p><i>Demon Crush</i> is an action platformer game currently in development. I worked with the team to develop a style which suited their vision for the game and created artwork and animation for characters and environments. Part way through development the style of the game was rebuilt from the ground up based on our experience up to that point to better support the direction the project was heading. Here you can see mock-ups and animation from from both version of the game, all of which I created.
+						<br><br>
+						 On this project I learned a lot about creating usable assets and pipelines for game art. I created systems for generating automated tilesets and helped to develop a system of asset management that allows automatic export of layered character animation.
+						</p>
+				</div>
+			</div>
+			<div class="images">
+				<img data-src="images/demon_crush/castle_mockup.png">
+				<img data-src="images/demon_crush/forest_mockup.png">
+				<div class="lineContainer">
+					<div class="container">
+						<img data-src="images/demon_crush/kenzo_fight_stance.png">
+						<img data-src="images/demon_crush/kenzo_walk.gif">
+						<img data-src="images/demon_crush/kenzo_attack.gif">
+						<img data-src="images/demon_crush/kenzo_sword_dash.gif">
+					</div>
+				</div>
+				<div class="lineContainer">
+					<div class="container">
+						<img data-src="images/demon_crush/enemy_run.gif">
+						<img data-src="images/demon_crush/rifleman_fire_forward.gif">
+						<img data-src="images/demon_crush/dog_run.gif">
+					</div>
+				</div>
+				<img data-src="images/demon_crush/forest.png">
+				<img data-src="images/demon_crush/gate.png">
+				<img data-src="images/demon_crush/town.png">
+				<div class="lineContainer">
+					<div class="container">
+						<img data-src="images/demon_crush/kenzo_run.gif">
+						<img data-src="images/demon_crush/kenzo_launch.gif">
+						<img data-src="images/demon_crush/defender_attack.gif">
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="panel" id="strategyGamePanel">
+			<h2>
+				Untitled Strategy Game
+				<span class="h2-meta">2018 - 2019</span>
+			</h2>
+			<div class="readMore">
+				<a href="#" onclick="toggleReadMore(this); return false;">Read more...</a>
+				<div class="readMoreText" style="display:none;">
+					<p>
+						This game was in development briefly before being shut down as the project lead moved on to other things. For it I created units which were able to be recoloured in engine in order to create different factions. I also developed many environment and UI assets for the game.
+					</p>
+				</div>
+			</div>
+			<div class="images">
+				<img data-src="images/strategy_game/map.png">
+				<img data-src="images/strategy_game/objects.png">
+				<div class="container">
+					<img data-src="images/strategy_game/characters.png">
+				</div>
+				<div class="container">
+					<img data-src="images/strategy_game/icons.png">
+				</div>
+				
+			</div>
+		</div>
+		<br>
+		<div class="panel" id="platformerPanel">
+			<h2>
+				Untitled Platformer Game
+				<span class="h2-meta">2018</span>
+			</h2>
+			<div class="readMore">
+				<a href="#" onclick="toggleReadMore(this); return false;">Read more...</a>
+				<div class="readMoreText" style="display:none;">
+					<p>
+						This was just a small job exploring options of a pixel aesthetic for a platformer game. The characters are based on designs by Jeremi Slobert. While it did not go ahead I really like the artworks I did for it.
+					</p>
+				</div>
+			</div>
+			<div class="images">
+				<div class="container">
+					<img data-src="images/platformer_game/mint.png">
+					<img data-src="images/platformer_game/mint_run.gif">
+					<img data-src="images/platformer_game/mint_jump.gif">
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="panel" id="scheharazadePanel">
+			<h2>
+				Scheharazade
+				<span class="h2-meta">2017 - 2018</span>
+			</h2>
+			<div class="readMore">
+				<a href="#" onclick="toggleReadMore(this); return false;">Read more...</a>
+				<div class="readMoreText" style="display:none;">
+					<p>
+						<i>Scheharazade & the Ensorcelled Sword</i> is a action rhythm game currently in development. I helped to kickstart the project by providing initial character art and animation based on character designs by Maxavier Peterson. Below are some of the animations I created for the game, since leaving the project they have been retooled by Maxavier to suit the current needs of the project.
+					</p>
+				</div>
+			</div>
+			<div class="images">
+				<div class="lineContainer">
+					<div class="container">
+						<img data-src="images/scheharazade/low_idle_animated.gif">
+						<img data-src="images/scheharazade/shroud_idle_animated.gif">
+						<img data-src="images/scheharazade/draw_idle_animated.gif">
+						<img data-src="images/scheharazade/high_idle_animated.gif">
+						<img data-src="images/scheharazade/back_idle_animated.gif">
+						<img data-src="images/scheharazade/attacks.gif">
+					</div>
+				</div>
+				<div class="lineContainer">
+					<div class="container">
+						<img data-src="images/scheharazade/charybdis.gif">
+						<img data-src="images/scheharazade/seven_storms_at_sea.gif">
+					</div>
+				</div>
+				<div class="lineContainer">
+					<div class="container">
+						<img data-src="images/scheharazade/battle.gif">
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="panel" id="metalweavegamesPanel">
+			<h2>
+				Metal Weave Games
+				<span class="h2-meta">2015 - 2019</span>
+			</h2>
+			<div class="readMore">
+				<a href="#" onclick="toggleReadMore(this); return false;">Read more...</a>
+				<div class="readMoreText" style="display:none;">
+					<p>
+						I worked with Andreas Walters to develop art for a theoretical action adventure game. That project didn't make it to production however we continued to work together to create advertising material for his <i>Embers of the Forgotten Kingdom</i> and <i>Baby Bestiary</i> books.
+					</p>
+				</div>
+			</div>
+			<div class="images">
+				<div class="lineContainer">
+					<img data-src="images/metal_weave_games/background.png">
+				</div>
+				<div class="lineContainer">
+					<div class="container">
+						<img data-src="images/metal_weave_games/viking_run_east.gif">
+						<img data-src="images/metal_weave_games/viking_side_attack.gif">
+						<img data-src="images/metal_weave_games/viking_side_attack_combo.gif">
+					</div>
+				</div>
+				<div class="lineContainer">
+					<img data-src="images/metal_weave_games/embers.gif">
+				</div>
+				<div class="lineContainer">
+					<img data-src="images/metal_weave_games/owlbear.gif">
+					<img data-src="images/metal_weave_games/bulette.gif">
+					<img data-src="images/metal_weave_games/phoenix.gif">
+					<img data-src="images/metal_weave_games/phase_cat.gif">
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="panel" id="survivalgamePanel">
+			<h2>
+				Untitled Survival Game
+				<span class="h2-meta">2016</span>
+			</h2>
+			<div class="readMore">
+				<a href="#" onclick="toggleReadMore(this); return false;">Read more...</a>
+				<div class="readMoreText" style="display:none;">
+					<p>
+						This was a short contract to develop a character and animation for a survival game concept. While the project did not go ahead I very much like the work I did for it.
+					</p>
+				</div>
+			</div>
+			<div class="images">
+				<div class="lineContainer">
+					<div class="container">
+						<img data-src="images/survival_game/idle.gif">
+						<img data-src="images/survival_game/walk.gif">
+						<img data-src="images/survival_game/jump.gif">
+						<img data-src="images/survival_game/wall_slide.gif">
+						<img data-src="images/survival_game/double_jump.gif">
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="panel" id="starheartsPanel">
+			<h2>
+				Star Hearts
+				<span class="h2-meta">2015 - 2019</span>
+			</h2>
+			<div class="readMore">
+				<a href="#" onclick="toggleReadMore(this); return false;">Read more...</a>
+				<div class="readMoreText" style="display:none;">
+					<p>
+						<i>Star Hearts</i> is a platform adventure game in development by Arcap Creative. I came into the project as an animator using the style and character designs of Shane Ives. The project is currently on hiatus as the team works on the scaled down prequel Star Hearts: Launch Point. The base sprites for all of these characters where created by Shane. The environment art for the bridge was provided to me, I just made the burning animation.
+					</p>
+				</div>
+			</div>
+			<div class="images">
+				<div class="lineContainer">
+					<div class="container">
+						<img data-src="images/star_hearts/idle_peer.gif">
+						<img data-src="images/star_hearts/upgrade_effect.gif">
+					</div>
+					<div class="container">
+						<img data-src="images/star_hearts/magic_combined.gif">
+					</div>
+					<div class="container">
+						<img data-src="images/star_hearts/monkeybear_idle.gif">
+						<img data-src="images/star_hearts/monkeybear_run.gif">
+						<img data-src="images/star_hearts/monkeybear_affection.gif">
+					</div>					
+					<div class="container">
+						<img data-src="images/star_hearts/frog_move.gif">
+						<img data-src="images/star_hearts/frog_lay.gif">
+						<img data-src="images/star_hearts/babyfrog_hatch.gif">
+					</div>
+				</div>
+				<div class="lineContainer">
+					<div class="container">
+						<img data-src="images/star_hearts/rocknid_run.gif">
+					</div>
+					<div class="container">
+						<img data-src="images/star_hearts/dinomount_idle.gif">
+						<img data-src="images/star_hearts/dinomount_walk.gif">
+					</div>
+					<div class="container">
+						<img data-src="images/star_hearts/coralcanid_idle.gif">
+						<img data-src="images/star_hearts/coralcanid_turn.gif">
+					</div>
+					<div class="container">
+						<img data-src="images/star_hearts/armadillo_idle.gif">
+						<img data-src="images/star_hearts/armadillo_death.gif">
+					</div>
+				</div>
+				<div class="lineContainer">
+					<div class="container">
+						<img data-src="images/star_hearts/owl_glide.gif">
+						<img data-src="images/star_hearts/owl_flap.gif">
+					</div>
+					<div class="container">
+						<img data-src="images/star_hearts/bat_fly.gif">
+					</div>
+					<div class="container">
+						<img data-src="images/star_hearts/sealion_sleep.gif">
+					</div>
+					<div class="container">
+						<img data-src="images/star_hearts/worm_death.gif">
+					</div>					
+				</div>
+				<div class="lineContainer">
+					<div class="container">
+						<img data-src="images/star_hearts/breathe_fire.gif">
+					</div>
+					<div class="container">
+						<img data-src="images/star_hearts/idle_loop.gif">
+						<img data-src="images/star_hearts/charge.gif">
+					</div>
+				</div>
+				<div class="lineContainer">
+					<div class="container">
+						<img data-src="images/star_hearts/burn.gif">
+					</div>
+				</div>
+				<div class="lineContainer">
+					<div class="container">
+						<img data-src="images/star_hearts/tail.gif">
+						<img data-src="images/star_hearts/eat.gif">	
+					</div>
+				</div>
+				<div class="lineContainer">
+					<div class="container">
+						<img data-src="images/star_hearts/raise_head.gif">
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="panel" id="runordiePanel">
+			<h2>
+				Run or Die
+				<a href="https://store.steampowered.com/app/325150/Run_or_Die/" target="_blank" rel="noopener noreferrer">
+					<img class="h2-link" data-src="images/icons/steam.png" alt="steam.com">
+				</a>
+				<span class="h2-meta">2013 - 2015</span>
+			</h2>
+			<div class="readMore">
+				<a href="#" onclick="toggleReadMore(this); return false;">Read more...</a>
+				<div class="readMoreText" style="display:none;">
+					<p>
+						Run Or Die is an endless runner game which I collaborated on during University. While my art was used during development at various stages for different parts of the project ultimately it was only the main character and her animations which appear in the final game.
+					</p>
+				</div>
+			</div>
+			<div class="images">
+				<div class="lineContainer">
+					<div class="container">
+						<img data-src="images/run_or_die/collective.gif">
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
 	</div>
 	<div class="page" id="tutorialsPage" style="display:none;">
 		<h2>Tutorials</h2>
+		
 	</div>
 
 	<script>
@@ -180,6 +658,8 @@
 			document.getElementById(page).querySelectorAll("img[data-src]").forEach(img => {
 				img.src = img.dataset.src;
 				img.removeAttribute("data-src");
+			
+			initCarousels(document.getElementById(page));
 			});
 
 		}
@@ -201,6 +681,47 @@
 				link.style.color = "#00ffbf";
 		}
 
+		function initCarousels(root = document) {
+			root.querySelectorAll('.carousel').forEach(car => {
+				if (car.__carouselInit) return;
+				car,__carouselInit = true;
+				const imgs = Array.from(car.querySelectorAll('img'));
+				if (!imgs.length) return;
+
+				let prev = car.querySelector('.prev');
+				let next = car.querySelector('.next');
+				let indexSpan = car.querySelector('.index');
+				if (!prev || !next || !indexSpan) {
+					const controls = document.createElement('div');
+					controls.className = 'carousel-controls';
+					prev = document.createElement('button');
+					prev.className = 'prev';
+					prev.innerHTML = '&lt;';
+					next = document.createElement('button');
+					next.className = 'next';
+					next.innerHTML = '&gt;';
+					indexSpan = document.createElement('span');
+					indexSpan.className = 'index';
+					controls.append(prev, indexSpan, next);
+					car.appendChild(controls);
+				}
+
+				let current = 0;
+				function show(i) {
+					current = (i + imgs.length) % imgs.length;
+					imgs.forEach((img, idx) => {
+						img.classList.toggle('active', idx === current);
+					});
+					indexSpan.textContent = (current + 1) + '/' + imgs.length;
+				}
+
+				prev.addEventListener('click', () => { show(current - 1); });
+				next.addEventListener('click', () => { show(current + 1); });
+
+				show(0);
+			});
+		}
+		
 		window.addEventListener('hashchange', handleRoute);
 		window.addEventListener('DOMContentLoaded', handleRoute);
 	</script>
