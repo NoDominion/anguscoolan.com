@@ -38,6 +38,18 @@
 		gap: 16px;
 	}
 
+	.sideBySide {
+		display: flex;
+		width: fit-content;
+		margin: 0 auto;
+		gap: 16px;
+	}
+
+	.container {
+		width: fit-content;
+		border: 1px solid;
+	}
+
     .panel h2 {
 		margin-top: 0px;
     	margin-bottom: 4px;
@@ -114,9 +126,24 @@
 				<img data-src="images/fantasmithy/map.png">
 			</div>
 			<br>
-			<div class="images">
-				<img data-src="images/fantasmithy/Player_RunNorth.gif">
+			<div class="sideBySide">
+				<div class="container">
+					<div class="images">
+						<img data-src="images/fantasmithy/player_run.gif">
+						<img data-src="images/fantasmithy/player_attack.gif">
+					</div>
+					<br>
+					<div class="images">
+						<img data-src="images/fantasmithy/elemental_electricity.gif">
+						<img data-src="images/fantasmithy/elemental_ice.gif">
+						<img data-src="images/fantasmithy/elemental_fire.gif">
+					</div>
+				</div>
+				<div class="images">
+					<img data-src="images/fantasmithy/swords.png">
+				</div>
 			</div>
+			
 		</div>
 	</div>
 	<div class="page" id="welcomePage" style="display:none;">
