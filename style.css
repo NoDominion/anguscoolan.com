@@ -2,6 +2,7 @@
 	--base-color: #bfbfbf;
 	--shaded-color: #a8a8a8;
 	--darkened-color: grey;
+	--lightened-color: lightgrey;
 
 	--text-color: #000000;
 	--text-highlight-color: #00cebd;
@@ -63,6 +64,12 @@ p {
 }
 
 .page {
+}
+
+.paragraph {
+	padding: 16px; 
+	border-radius: 8px; 
+	background-color: var(--lightened-color)
 }
 
 .panel {

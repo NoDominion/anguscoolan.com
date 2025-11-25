@@ -1,0 +1,67 @@
+<!-- shamelessly lifted from https://github.com/andrew-a-hale/placetime -->
+<html>
+<head>
+    <title>Placetime</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.gif">
+</head>
+
+<style>
+    .main {
+        min-height: 100%;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-auto-rows: minmax(0, 1fr);
+        grid-auto-flow: row;
+		font-family: 'Courier New', Courier, monospace;
+		font-weight: bold;
+        font-size: 96px;
+    }
+</style>
+
+<body onload="getLocation()">
+    <div class="main">
+        <p id="placetime">GETTING PLACE</p>
+		<p id="lookup" style="display: none;">Please Look Up</p>
+    </div>
+
+    <script>
+        const x = document.getElementById("placetime");
+		const lookupText = document.getElementById("lookup");
+        const secondsInDay = 86400;
+        const secondsInHalfDay = 43200;
+		const minPlacetime = 0.499265;
+		const maxPlacetime = 0.500735;
+        const maxLon = 180;
+        var lon;
+
+        function error(err) {
+            console.error(`ERROR(${err.code}): ${err.message}`);
+        }
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.watchPosition(saveLon, error, {enableHighAccuracy: true});
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function saveLon(position) {
+            lon = position.coords.longitude;
+        }
+
+        setInterval(function placetime() {
+            if (lon) {
+                val = (((lon / maxLon * secondsInHalfDay) + (Date.now() / 1000)) % secondsInDay) / secondsInDay;
+                x.innerHTML = Number.parseFloat(val).toFixed(5);
+				if (val > minPlacetime && val < maxPlacetime) lookupText.style = ""
+				else lookupText.style = "display: none;"
+            }
+        }, 10);
+
+    </script>
+
+</body>
+</html>
+

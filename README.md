@@ -1,2 +1,2 @@
 # anguscoolan.com
-Website is under construction
+The portfolio website for video game artist Angus Coolan
