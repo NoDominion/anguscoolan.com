@@ -3,20 +3,11 @@
 <head>
     <title>Placetime</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.gif">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body onload="getLocation()">
-    <div style="
-    min-height: 100%;
-	display: grid;
-	justify-items: center;
-	align-items: center;
-	grid-auto-rows: minmax(0, 1fr);
-	grid-auto-flow: row;
-	font-family: 'Courier New', Courier, monospace;
-	font-weight: bold;
-	font-size: 96px;"
-    >
+    <div class="main">
         <p id="placetime">GETTING PLACE</p>
 		<p id="lookup" style="display: none;">Please Look Up</p>
     </div>
