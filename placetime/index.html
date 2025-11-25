@@ -8,7 +8,7 @@
 
 <body onload="getLocation()">
     <div class="main">
-        <p id="placetime" style="font-family: 'Courier New', Courier, monospace;">GETTING PLACE</p>
+        <p id="placetime">GETTING PLACE</p>
 		<p id="lookup" style="display: none;">Please Look Up</p>
     </div>
 
@@ -30,7 +30,7 @@
             if (navigator.geolocation) {
                 navigator.geolocation.watchPosition(saveLon, error, {enableHighAccuracy: true});
             } else {
-                x.innerHTML = "Geolocation is not supported by this browser.";
+                x.textContent = "Geolocation is not supported by this browser.";
             }
         }
 
@@ -41,7 +41,7 @@
         setInterval(function placetime() {
             if (lon) {
                 val = (((lon / maxLon * secondsInHalfDay) + (Date.now() / 1000)) % secondsInDay) / secondsInDay;
-                x.innerHTML = Number.parseFloat(val).toFixed(5);
+                x.textContent = Number.parseFloat(val).toFixed(5);
 				if (val > minPlacetime && val < maxPlacetime) lookupText.style = ""
 				else lookupText.style = "display: none;"
             }
