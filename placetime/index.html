@@ -42,8 +42,8 @@
             if (lon) {
                 val = (((lon / maxLon * secondsInHalfDay) + (Date.now() / 1000)) % secondsInDay) / secondsInDay;
                 x.textContent = Number.parseFloat(val).toFixed(5);
-				if (val > minPlacetime && val < maxPlacetime) lookupText.style = ""
-				else lookupText.style = "display: none;"
+				if (val > minPlacetime && val < maxPlacetime) lookupText.style.display = "";
+				else lookupText.style.display = "none";
             }
         }, 10);
 
